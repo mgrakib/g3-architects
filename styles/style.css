@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-font : 'Work Sans', sans-serif;
+    --primary-color : #FF900E;
+    --primary-color-transparent: hsla(32, 100%, 53%, 0.100);
+    --dark-01: #131313;
+    --dark-02 : #424242;
+    --dark-03 : #727272;
+    --white-color: #fff;
+    --black-color: #000;
+    --primary-padding : 0 260px;
+    --transition-01: all .1s linear;
+    --transition-02: all .2s linear;
+    --transition-03: all .3s linear;
+    --transition-04: all .4s linear;
+    --transition: all .5s linear;
+}
+
+body {
+    font-family: var(--primary-font);
+}
+
+
+.btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 5px;
+    color: var(--white-color);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.btn:hover {
+    background-color: var(--dark-01);
+    transition: var(--transition-04);
+}
+
+.btn::after {
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    background-color: var(--dark-01);
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    z-index: -2;
+    transition: var(--transition-03);
+
+}
+.btn:hover:after {
+   width: 100%;
+}
+
+/* *********************
+header style start
+********************** */
+
+.header {
+    padding: var(--primary-padding);
+    background-color: var(--primary-color-transparent);
+}
+
+.nav {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .logo {
+    color: var(--dark-01);
+    font-size: 25px;
+    line-height: 52px;
+}
+.nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav> ul li a{
+    color: var(--dark-02);
+    text-decoration: none;
+}
+
+
+.nav .hambar {
+    color: var(--dark-01);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    display: none;
+}
+
+/* ----------------
+header-content
+------------------- */
+.header-content {
+    text-align: center;
+}
+
+.header-content .header-titile {
+    font-size: 48px;
+    line-height: 55px;
+}
+
+.header-content .header-text {
+    margin: 40px 0 30px;
+}
