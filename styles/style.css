@@ -13,7 +13,9 @@
     --dark-03 : #727272;
     --white-color: #fff;
     --black-color: #000;
-    --primary-padding : 0 260px;
+    --primary-padding : 50px 260px 30px;
+    --secondary-padding : 50px 290px 30px;
+    --primary-padding-mobile : 0 20px;
     --transition-01: all .1s linear;
     --transition-02: all .2s linear;
     --transition-03: all .3s linear;
@@ -60,6 +62,13 @@ body {
    width: 100%;
 }
 
+.section-title {
+    font-size: 36px;
+    line-height: 40px;
+    position: relative;
+    font-weight: 700;
+}
+
 /* *********************
 header style start
 ********************** */
@@ -70,10 +79,10 @@ header style start
 }
 
 .nav {
-    padding: 50px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .nav .logo {
@@ -116,4 +125,351 @@ header-content
 
 .header-content .header-text {
     margin: 40px 0 30px;
+    
+}
+
+.hero-img img {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* *********************
+header style start end
+********************** */
+
+
+
+/* *************************
+Quick list of Featur style
+************************** */
+.quick-list-feature-section {
+    padding: var(--secondary-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quick-list-feature-images {
+    max-width: 48%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.quick-list-feature-image {
+    overflow: hidden;
+}
+.quick-list-feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-04);
+
+}
+.quick-list-feature-image:hover img {
+    transform: scale(102%);
+
+}
+
+.quick-list-feature-text {
+    width: 46%;
+}
+
+.quick-list-feature-title {
+    font-size: 32px;
+    color: var(--dark-03);
+}
+
+.quick-list-feature-title b {
+    color: var(--dark-01);
+}
+.quick-list-feature-title b span {
+    color: var(--primary-color);
+}
+
+.quick-list-feature-info {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+/* *************************
+Quick list of Featur style end
+************************** */
+
+
+/* *************************
+    features style
+************************** */
+.features {
+    padding: var(--primary-padding);
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.features-image-container {
+    width: 48%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.feactures-text-container {
+    width: 44%;
+}
+
+.features-image-container img {
+    width: 100%;
+}
+
+.features-title {
+    margin: 0 0 18px 15px;
+
+}
+.features-title::after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+
+.features-text {
+    font-size: 12px;
+    margin: 0px 0;
+}
+
+.features-text-container {
+    padding: 15px;
+    box-shadow: 0 0 5px 2px rgba(198, 198, 198, 0.213);
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.exprience-cart {
+    position: absolute;
+    padding: 30px 35px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--white-color);
+    border-radius: 10px;
+    top: 79%;
+    left: 48%;
+}
+
+.exprience-cart h3 {
+    font-size: 30px;
+    line-height: 40px;
+    
+}
+
+/* *************************
+    features style end
+************************** */
+
+
+/* *************************
+    some-facts
+************************** */
+
+.some-facts {
+    padding: var(--primary-padding);
+}
+
+.some-facts-tex{
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 20px;
+}
+
+
+.some-facts-icon-container {
+    padding: var(--secondary-padding);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 60px;
+}
+
+
+.some-facts-icon-box {
+    background-color: rgba(255, 143, 14, 0.100);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--dark-02);
+    transition: var(--transition-03);
+}
+.some-facts-icon-box:nth-child(even):hover {
+    background-color: rgba(255, 143, 14);
+    color: var(--white-color);
+    transform: rotate(-5deg) scale(105%);
+}
+.some-facts-icon-box:nth-child(odd):hover {
+    background-color: rgba(255, 143, 14);
+    color: var(--white-color);
+    transform: rotate(5deg) scale(105%);
+}
+
+
+.some-facts-icon-box img{
+    transition: var(--transition-02);
+}
+.some-facts-icon-box:hover img{
+    transform: rotateY(360deg);
+}
+
+.some-facts-icon-box .icon-numebr {
+    font-size: 24px;
+    margin: 5px 0 0;
+}
+
+.icon-text {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ****************
+media query start
+**************** */
+
+@media only screen and (max-width :576px){
+    
+/* *********************
+header style start
+********************** */
+
+.header {
+    padding: var(--primary-padding-mobile);
+}
+.nav {
+    padding: 20px 0;
+
+}
+.nav .logo {
+    font-size: 18px;
+    line-height: 52px;
+}
+
+.nav > ul {
+    display: none;
+}
+
+.nav .hambar {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+/* ----------------
+header-content
+------------------- */
+
+.header-content .header-titile {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.header-content .header-text {
+    font-size: 14px;
+    margin: 30px 0 20px;
+    
+}
+
+/* *************************
+Quick list of Featur style
+************************** */
+.quick-list-feature-section {
+    padding: var(--primary-padding-mobile);
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.quick-list-feature-images {
+    max-width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+.quick-list-feature-text {
+    width: 100%;
+    text-align: center;
+}
+
+/* *************************
+    features style
+************************** */
+.features {
+    padding: var(--primary-padding-mobile);
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.features-image-container {
+    width: 100%;
+  
+}
+.feactures-text-container {
+    width: 100%;
+}
+
+.exprience-cart {
+    position: relative;
+    transform: translateX(50%);
+    left: 0%;
+    width: 50%;
+    margin: 10px 0;
+}
+
+
+.some-facts {
+    padding: var(--primary-padding-mobile);
+}
+
+.some-facts-icon-container {
+    padding: var(--primary-padding-mobile);
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+}
+
+.some-facts-icon-box .icon-numebr {
+    font-size: 34px;
+}
+
+.icon-text {
+    font-size: 22px;
+}
+
+
+
+
+
 }
