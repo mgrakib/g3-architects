@@ -15,6 +15,7 @@
     --black-color: #000;
     --primary-padding : 50px 260px 30px;
     --secondary-padding : 50px 290px 30px;
+    --tertiary-padding : 0 260px;
     --primary-padding-mobile : 0 20px;
     --transition-01: all .1s linear;
     --transition-02: all .2s linear;
@@ -336,21 +337,116 @@ Quick list of Featur style end
 }
 
 
+/* ***********************
+    section for bonous
+*********************** */
 
+.bonous_section {
+    padding: var(--tertiary-padding);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 400px;
+}
 
+.bonous_box {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    height: 100%;
 
+}
+.bonous_box::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #131313a3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: var(--transition-03);
+}
+.bonous_box:hover:after {
+    opacity: 1;
+}
 
+.bonous_box img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.col-2 {
+    grid-column: auto / span 2;
+}
+.architecture, .construction {
+    position: relative;
+    margin: 5px 10px;
+}
+.architecture::after, .construction::after {
+    content: "";
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+}
 
+.architecture::after{
+    background-color: var(--primary-color);
+}
+.construction::after{
+    background-color: hotpink;
+}
+.bonous_box .bonouse-section-text {
+    position: absolute;
+    bottom: -180px;
+    width: 70%;
+    left: 20px;
+    color: var(--white-color);
+    z-index: 50;
+    transition: var(--transition-03);
+}
+.bonous_box:hover .bonouse-section-text {
+    bottom: 40px;
+}
 
+.bonous_section_second {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: var(--tertiary-padding);
+    grid-template-rows: 300px;
+}
 
+.member_ship {
+    background-color: #212F36;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: var(--white-color);
+}
 
+.member_ship h3{
+    position: relative;
+}
+.member_ship h3::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: var(--dark-03);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-
-
-
-
-
+.member_ship p {
+    font-size: 12px;
+    margin: 20px 0;
+}
 
 
 
@@ -467,6 +563,52 @@ Quick list of Featur style
 .icon-text {
     font-size: 22px;
 }
+
+
+/* ***********************
+    section for bonous
+*********************** */
+
+.bonous_section {
+    padding: var(--primary-padding-mobile);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 20px;
+}
+
+.bonous_box {
+    height: 96%;
+}
+.col-1{
+    grid-column: auto /span 2;
+}
+.bonous_section_second {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: var(--primary-padding-mobile);
+    grid-template-rows: 300px;
+    
+}
+
+.member_ship {
+    margin-bottom: 20px;
+    order: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
