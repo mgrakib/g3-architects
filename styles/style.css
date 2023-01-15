@@ -280,7 +280,7 @@ Quick list of Featur style end
     padding: var(--primary-padding);
 }
 
-.some-facts-tex{
+.some-facts-tex, .sponsors-tex{
     font-size: 14px;
     margin: 10px 0;
     line-height: 20px;
@@ -448,6 +448,33 @@ Quick list of Featur style end
     margin: 20px 0;
 }
 
+/* ****************
+Sponsors section start
+**************** */
+.sponsors_container {
+    padding: var(--primary-padding);
+    text-align: center;
+}
+
+.sponsors_companies_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.sponsors_companies_container img {
+    height: 25px;
+    filter: grayscale();
+}
+
+
+
+
+
+
+
 
 
 /* ****************
@@ -595,6 +622,13 @@ Quick list of Featur style
     order: 1;
 }
 
+/* ****************
+Sponsors section start
+**************** */
+.sponsors_container {
+    padding: var(--primary-padding-mobile);
+    text-align: center;
+}
 
 
 
