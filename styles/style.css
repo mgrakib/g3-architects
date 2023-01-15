@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --primary-font : 'Work Sans', sans-serif;
     --primary-color : #FF900E;
@@ -501,6 +502,7 @@ header style start
 }
 .nav {
     padding: 20px 0;
+    flex-direction: column;
 
 }
 .nav .logo {
@@ -509,13 +511,8 @@ header style start
 }
 
 .nav > ul {
-    display: none;
-}
-
-.nav .hambar {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }
 
 
@@ -579,8 +576,13 @@ Quick list of Featur style
     left: 0%;
     width: 50%;
     margin: 10px 0;
+    padding: 30px 20px;
 }
 
+.exprience-cart h3 {
+    font-size: 22px;
+    line-height: 24px;
+}
 
 .some-facts {
     padding: var(--primary-padding-mobile);
@@ -638,26 +640,17 @@ Sponsors section start
     padding: var(--primary-padding-mobile);
     text-align: center;
 }
-
+.sponsors_companies_container{
+    flex-direction: column;
+    gap: 10px;
+}
 
 .footer {
     padding: var(--primary-padding-mobile);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+/* ****************
+media query end
+**************** */
