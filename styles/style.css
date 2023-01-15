@@ -469,8 +469,17 @@ Sponsors section start
     filter: grayscale();
 }
 
+.footer {
+    padding: var(--primary-padding);
+}
 
-
+.footer div p{
+    background-color: var(--primary-color-transparent);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--dark-02);
+}
 
 
 
@@ -631,6 +640,9 @@ Sponsors section start
 }
 
 
+.footer {
+    padding: var(--primary-padding-mobile);
+}
 
 
 
